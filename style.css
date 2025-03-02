@@ -1,0 +1,262 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    height: 134px;
+    position: relative;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo {
+    margin: 31px 24px;
+}
+#logo img {
+    height: 94px;
+    width: 104px;
+}
+
+/* Navigation Bar: List Styling */
+#navbar ul {
+    display: flex;
+}
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+#navbar ul li {
+    color: white;
+    list-style: none;
+    font-size: 1.5rem;
+}
+#navbar ul li a {
+    color: coral;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#navbar ul li a:hover {
+    color: red;
+    background-color: salmon;
+}
+
+/* Home Section */
+#home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before {
+    content: "";
+    background: url('top-view-vegetables-herbs-lentil-vegetables-spices-citrus-fruits-dish-mushrooms-pepper_140725-73840.jpg');
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+#home h1 {
+    color: orangered;
+    text-align: center;
+    font-family: "Anton", sans-serif;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-family: "Anton", sans-serif;
+}
+
+#h-primary-center{
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: "Anton", sans-serif;
+}
+
+.btn {
+    padding: 5px 20px;
+    border: 3px solid orangered;
+    background-color: salmon;
+    border-radius: 10px;
+    font-family: "Anton", sans-serif;
+    color: orangered;
+}
+.btn:hover {
+    background-color: red;
+}
+
+/* Services Section */
+#services {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#services h1 {
+    color: orangered; /* Change to any color you like */
+    font-family: "Anton", sans-serif; /* Optional: Customize font */
+    text-align: center;
+}
+
+.box {
+    border: 2px solid orange;
+    text-align: center;
+    padding: 10px;
+    padding-left: 10px;
+    width: 400px;
+    color: orangered;
+    font-family: "Anton", sans-serif;
+}
+.box img {
+    width: 100%;
+    height: 260px;
+    
+}
+.box p{
+    color: orange;
+    
+}
+
+/* Client Section */
+#client-section {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* Light background for contrast */
+    text-align: center;
+}
+
+#client-section h1 {
+    color: #ff4500; /* Set a theme color for the heading */
+    font-family: "Anton", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Container for the logos */
+.brands {
+    display: flex;
+    justify-content: center; /* Center-align logos */
+    align-items: center;
+    gap: 20px; /* Space between logos */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Styling for individual logo boxes */
+.c-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px; /* Control size of each logo box */
+    height: 120px;
+    padding: 10px;
+    background-color: #ffffff; /* White background for each logo */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lift effect */
+    transition: transform 0.3s ease;
+}
+
+/* Styling for images inside the c-box */
+.c-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensure image fits within box */
+}
+
+/* Hover effect */
+.c-box:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+}
+
+/*contact section*/
+/* Contact Section */
+#contact-section {
+    padding: 50px 0;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+#contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.1; /* Adjust opacity as needed */
+    z-index: 1; /* Place behind content */
+}
+
+#contact-section h1 {
+    color: orangered;
+    font-family: 'Anton', 'Sans Serif';
+    margin-bottom: 30px;
+}
+
+/* Contact Container */
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+/* Individual Contact Items */
+.phone, .email, .address {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Spacing between icon and text */
+    height: 100px;
+    width: 300px; /* Adjust width to fit text content better */
+    padding: 10px;
+    background-color: white;
+    border: 3px solid orangered;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: left; /* Align text to the left within each box */
+}
+
+/* Styling for Icons */
+.phone img, .email img, .address img {
+    width: 30px;
+    height: auto;
+}
+
+/* Styling for Text inside Contacts */
+.phone p, .email p, .address p {
+    margin: 0;
+    font-size: 14px;
+    color: black;
+}
